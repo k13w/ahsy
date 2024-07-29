@@ -17,9 +17,12 @@
     "@tauri-apps/api": "^1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "cmdk-solid": "^1.1.0",
     "lucide-react": "^0.416.0",
+    "lucide-solid": "^0.417.0",
     "preline": "^2.4.1",
     "solid-js": "^1.7.8",
+    "solid-toast": "^0.5.0",
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7"
   },

@@ -5,6 +5,7 @@ use std::process::Command;
 // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
 #[tauri::command]
 fn run_aws_cli_command(command: String) -> Result<String, String> {
+    println!("Running command: {}", command);
     let output = Command::new("sh")
         .arg("-c")
         .arg(command)
@@ -18,7 +19,7 @@ fn run_aws_cli_command(command: String) -> Result<String, String> {
     }
 }
 fn main() {
-    let _ = fix_path_env::fix(); // <---- Add this
+    let _ = fix_path_env::fix();
     tauri::Builder::default()
         .invoke_handler(tauri::generate_handler![run_aws_cli_command])
         .run(tauri::generate_context!())
