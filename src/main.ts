@@ -1,0 +1,1 @@
+import "ahsy" from "tauri"
