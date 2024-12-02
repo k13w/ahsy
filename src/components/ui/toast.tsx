@@ -43,7 +43,7 @@ type toastProps<T extends ValidComponent = "li"> = ToastRootProps<T> &
 export const Toast = <T extends ValidComponent = "li">(
 	props: PolymorphicProps<T, toastProps<T>>,
 ) => {
-	const [local, rest] = splitProps(props as toastProps, ["class", "variant"]);
+	const [local, ,client, rest] = splitProps(props as toastProps, ["class", "variant"]);
 
 	return (
 		<ToastPrimitive
